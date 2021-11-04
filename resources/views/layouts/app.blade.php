@@ -52,10 +52,16 @@
                                 </li>
                             @endif
                         @else
-                        <a class="dropdown-item" href="http://127.0.0.1:8000/main">
+                        <a class="dropdown-item" href="{{ url('/main') }}">
                                                     
                                         Mainpage
                         </a>
+                        @if(Auth::user()->id < 6 and Auth::user()->id > 0)
+                        <a class="dropdown-item" href="{{ url('/edit') }}">
+                                                    
+                                        Edit Delivery
+                        </a>
+                        @endif
                         <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
