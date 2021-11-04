@@ -12,10 +12,7 @@
     "devDependencies": {
         "axios": "^0.21",
         "bootstrap": "^4.6.0",
-<<<<<<< HEAD
         "cross-env": "^7.0.3",
-=======
->>>>>>> 46202a57d41af340f1b575d07253b4edf7b016c9
         "jquery": "^3.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -25,10 +22,7 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "vue": "^2.6.12",
-<<<<<<< HEAD
         "vue-loader": "^15.9.7",
-=======
->>>>>>> 46202a57d41af340f1b575d07253b4edf7b016c9
         "vue-template-compiler": "^2.6.12"
     }
 }
