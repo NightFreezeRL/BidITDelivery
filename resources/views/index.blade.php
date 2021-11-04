@@ -1,6 +1,6 @@
 @extends('layouts/layoutMeta')
 @section('content')
 <div>
-    <h1>Welcome</h1>
+    <h1>KEKW</h1>
 </div>
 @endsection('content')
