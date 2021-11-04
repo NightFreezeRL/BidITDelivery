@@ -10,7 +10,8 @@
                         {{ session('status') }}
                     </div>
                 @endif
-                <table bprder = "1">
+                <h1>  {{ Auth::user()->name }}, jūsu pasūtījumu saraksts:</h1>
+                <table brder = "1">
                         <tr>
                             <th>ID:</th>
                             <th>Package Number:</th>
