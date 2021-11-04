@@ -52,8 +52,8 @@
                                 </li>
                             @endif
                         @else
-                        <a class="dropdown-item" href="http://127.0.0.1/main" onclick="event.preventDefault();
-                                                     document.getElementById('login-form').submit();">
+                        <a class="dropdown-item" href="http://127.0.0.1:8000/main">
+                                                    
                                         Mainpage
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
