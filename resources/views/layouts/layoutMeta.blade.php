@@ -33,7 +33,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/users/{{ Auth::user()->id }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}#{{ Auth::user()->id }}
+                                    {{ Auth::user()->name }}
                                 </a>
                             </li>
                             <li class="nav-item">

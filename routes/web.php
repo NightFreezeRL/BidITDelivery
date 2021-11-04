@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Package;
+use App\Models\PackageUser;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    
     return view('index');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/main', function (){
+    $AUID = Auth::user()->id;
+    $userPackages = DB::table('user_package_list')->where('userID',  $AUID)->pluck('packageID')->toArray();
+    $packages = Package::all()->whereIn('id', $userPackages);
+    return view('main', ['packs' => $packages]);
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
