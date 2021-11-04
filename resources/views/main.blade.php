@@ -11,18 +11,18 @@
                     </div>
                 @endif
                 <h1>  {{ Auth::user()->name }}, jūsu pasūtījumu saraksts:</h1>
-                <table brder = "1">
+                <table style="width:400px;">
                         <tr>
                             <th>ID:</th>
                             <th>Package Number:</th>
                             <th>Delivery Status</th>
                         </tr>
                         @foreach($packs as $p)
-                        <tr>
+                        <tr style= "Border: 1px solid black;">
                             @csrf
-                            <td>{{ $p->id }}</tdh>
-                            <td>{{ $p->packageNumber }}</td>
-                            <td>{{ $p->deliveryStatus }}</td>
+                            <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
+                            <td style="Border: 1px solid black;">{{ $p->packageNumber }}</td>
+                            <td style="Border: 1px solid black;">{{ $p->deliveryStatus }}</td>
                             
                         </tr>
                         @endforeach
