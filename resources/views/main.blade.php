@@ -18,7 +18,7 @@
                             <th>Delivery Status</th>
                         </tr>
                         @foreach($packs as $p)
-                        <tr style= "Border: 1px solid black;">
+                        <tr>
                             @csrf
                             <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
                             <td style="Border: 1px solid black;">{{ $p->packageNumber }}</td>
