@@ -1,4 +1,4 @@
-@extends('layouts/layoutMeta')
+@extends('layouts.app')
 @section('content')
 <div>
     <h1>KEKW</h1>
