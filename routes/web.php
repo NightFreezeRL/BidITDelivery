@@ -23,7 +23,22 @@ Route::get('/main', function (){
     $AUID = Auth::user()->id;
     $userPackages = DB::table('user_package_list')->where('userID',  $AUID)->pluck('packageID')->toArray();
     $packages = Package::all()->whereIn('id', $userPackages);
-    return view('main', ['packs' => $packages]);
+    return view('main', ['packs' => $packages, 'AUID' => $AUID]);
+});
+Route::get('/edit', function (){
+    $AUID = Auth::user()->id;
+    $package = Package::all();
+    return view('edit', ['AUID' => $AUID, 'packs' => $package]);
+});
+Route::get('/package/{id}', function ($id){
+    $package = Package::all()->where('packageNumber', $id);
+    return view('package', ['pack' => $package]);
+});
+Route::post('/package/{id}', function ($id){
+    $id = request('id');
+    $type = request('progress');
+    DB::table('package')->where('id', $id)->update(array('deliveryStatus'=> $type));
+    return redirect('/main');
 });
 Auth::routes();
 
