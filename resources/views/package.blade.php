@@ -9,7 +9,7 @@
         
             <div class="card">
                 
-                <div class="card-header">Delivery number {{ $pack[0]->packageNumber }}</div>
+                <div class="card-header">Delivery number {{ $pack->first()->packageNumber }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
