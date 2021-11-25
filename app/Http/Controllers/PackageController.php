@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Http\Models\User_Package;
 
 class PackageController extends Controller
 {
@@ -31,5 +32,10 @@ class PackageController extends Controller
         ]);
     }
     return print("Success");
+    }
+
+    function test()
+    {
+        return User_Package::all();
     }
 }
