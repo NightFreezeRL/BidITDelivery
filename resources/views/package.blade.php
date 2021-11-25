@@ -29,7 +29,7 @@
                                  @csrf
                                 <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
                                 <input type="hidden" name="id" value="{{ $p->id }}">
-                                <td style="Border: 1px solid black;">{{ $p->packageNumber }}</td>
+                                <td style="Border: 1px solid black;">{{ $p->packageId }}</td>
                                 <td style="Border: 1px solid black;">
                                     <select name="Status" id="Status">
                                         <option value="Delivered">Delivered</option>

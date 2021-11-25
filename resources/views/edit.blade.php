@@ -27,7 +27,9 @@
                         <tr>
                             @csrf
                             <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
-                            <td style="Border: 1px solid black;"><a href="/package/{{ $p->packageNumber }}">{{ $p->packageNumber }}</a></td>
+                            <td style="Border: 1px solid black;">{{ $p->name }}</tdh>
+                            <td style="Border: 1px solid black;">{{ $p->adress }}</tdh>
+                            <td style="Border: 1px solid black;"><a href="/package/{{ $p->packageId }}">{{ $p->packageId }}</a></td>
                             <td style="Border: 1px solid black;">{{ $p->deliveryStatus }}</td>
                             
                         </tr>
