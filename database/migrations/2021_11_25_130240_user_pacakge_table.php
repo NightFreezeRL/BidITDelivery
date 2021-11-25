@@ -13,12 +13,14 @@ class UserPacakgeTable extends Migration
         $response = Http::get('https://bidit-web.herokuapp.com/api/users');
         foreach($response->object() as $user)
         {
+            Schema::create('user_package_table', function (Blueprint $table) {
             $table->id($user->id);
             $table->string($user->name);
             $table->string($user->email)->unique();
             //$table->string($user->adress);
             $table->string([PacakgeController::class, 'generatePackageId']);
             $table->string('deliveryStatus');
+            });
         }
     }
 
