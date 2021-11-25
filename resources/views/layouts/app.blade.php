@@ -52,10 +52,6 @@
                                 </li>
                             @endif
                         @else
-                        <a class="dropdown-item" href="{{ url('/main') }}">
-                                                    
-                                        Mainpage
-                        </a>
                         @if(Auth::user()->id < 6 and Auth::user()->id > 0)
                         <a class="dropdown-item" href="{{ url('/edit') }}">
                                                     

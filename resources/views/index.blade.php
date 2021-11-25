@@ -31,11 +31,14 @@
                                     <p>Official BidIT partner since 2021</p>
                                 </div>
                                 <div class="welcome_form">
-                                    <form action="#">
-                                        <input class="form-control" type="text" placeholder="Enter your product code">
+
+                                    <form action="" method="POST">
+                                        @csrf
+                                        <input class="form-control" type="text" name="packageId" placeholder="Enter your product code">
                                         <br>
                                         <input class="submit" type="submit" value="Track your product">
                                     </form>
+
                                 </div>
                             </div>
                         </div>

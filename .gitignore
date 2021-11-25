@@ -14,7 +14,9 @@ yarn-error.log
 /.idea
 /.vscode
 .env
-.env.ex
-.env.example1
 .env.example
+<<<<<<< HEAD
+=======
 .env
+.env
+>>>>>>> 6544c59c6056b6fed9379a0f72603cd74bf6c8cc

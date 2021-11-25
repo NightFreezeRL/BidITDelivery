@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Package;
 use App\Models\PackageUser;
+use App\Models\User_Package;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,25 +20,27 @@ Route::get('/', function () {
     
     return view('index');
 });
-Route::get('/main', function (){
-    $AUID = Auth::user()->id;
-    $userPackages = DB::table('user_package_list')->where('userID',  $AUID)->pluck('packageID')->toArray();
-    $packages = Package::all()->whereIn('id', $userPackages);
-    return view('main', ['packs' => $packages, 'AUID' => $AUID]);
+Route::post('/', function () {
+    $id = request('packageId');
+    return redirect()->to('/main/'.$id);
+});
+Route::get('/main/{id}', function ($id){
+    $User_Packages = User_Package::all()->where('packageId', $id);
+    return view('main', ['packs' => $User_Packages]);
 });
 Route::get('/edit', function (){
     $AUID = Auth::user()->id;
-    $package = Package::all();
+    $package = User_Package::all();
     return view('edit', ['AUID' => $AUID, 'packs' => $package]);
 });
 Route::get('/package/{id}', function ($id){
-    $package = Package::all()->where('packageNumber', $id);
+    $package = User_Package::all()->where('packageId', $id);
     return view('package', ['pack' => $package]);
 });
 Route::post('/package/{id}', function ($id){
     //$id = request('id');
     $type = request('Status');
-    Package::where('packageNumber', $id)->update(['deliveryStatus' => $type]);
+    User_Package::where('packageId', $id)->update(['deliveryStatus' => $type]);
     return redirect('/edit');
 });
 Auth::routes();
