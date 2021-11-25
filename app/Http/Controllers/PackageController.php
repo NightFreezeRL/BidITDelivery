@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use App\Http\Models\User_Package;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PackageController extends Controller
 {
@@ -20,22 +21,26 @@ class PackageController extends Controller
     }
 
     function generatePackage(){
-       /* $response = Http::get('https://bidit-web.herokuapp.com/api/users/{userId}');
+       $response = Http::get('https://bidit-web.herokuapp.com/api/users');
 
         foreach($response->object() as $user){
         DB::table('user_package_table')->insert([
             'name' => $user->name,
             'email' => $user->email,
-            'adress' => $user->adress,
-            'packageId' => generatePackageId(),
+            'adress' => '$user->adress',
+            'packageId' => PackageController::generatePackageId(),
             'deliveryStatus' => 'On Hold',
         ]);
-    }*/
+    }
     return print("Success");
     }
 
     function test()
     {
         return print("It works!");
+    }
+
+    function confirmation(){
+        return ;
     }
 }

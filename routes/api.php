@@ -25,4 +25,4 @@ Route::get('delivery/package/generate', [PackageController::class, 'generatePack
 //For debugging.
 Route::get('delivery/package/test', [PackageController::class, 'test']);
 //Get package status by packageID
-Route::post('delivery/package/{packageId}/status', [DeliveryController::class, 'confirmation']);
+Route::post('delivery/package/{packageId}/status', [PackageController::class, 'confirmation']);

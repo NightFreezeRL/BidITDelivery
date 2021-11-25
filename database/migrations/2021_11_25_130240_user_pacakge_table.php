@@ -13,7 +13,7 @@ class UserPacakgeTable extends Migration
         Schema::create('user_package_table', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('adress');
             $table->string('packageId');
             $table->string('deliveryStatus');
