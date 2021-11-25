@@ -20,7 +20,7 @@ class PackageController extends Controller
     }
 
     function generatePackage(){
-        $response = Http::get('https://bidit-web.herokuapp.com/api/users');
+       /* $response = Http::get('https://bidit-web.herokuapp.com/api/users/{userId}');
 
         foreach($response->object() as $user){
         DB::table('user_package_table')->insert([
@@ -30,12 +30,12 @@ class PackageController extends Controller
             'packageId' => generatePackageId(),
             'deliveryStatus' => 'On Hold',
         ]);
-    }
+    }*/
     return print("Success");
     }
 
     function test()
     {
-        return User_Package::all();
+        return print("It works!");
     }
 }
