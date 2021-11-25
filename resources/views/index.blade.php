@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="public/app.css">
 </head>
 
-<body class="js">
+<body class="js" style=" background-color:rgba(209, 209, 224);">
     <!--start header area-->
     <div id="preloader"></div>
     <section class="header_area" id="home">
