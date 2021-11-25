@@ -33,7 +33,7 @@
                                 <td style="Border: 1px solid black;">
                                     <select name="Status" id="Status">
                                         <option value="Delivered">Delivered</option>
-                                        <option value="On Route">En Route</option>
+                                        <option value="On Route">On Route</option>
                                         <option value="On Hold">On Hold</option>
                                     </select>
                                 </td>

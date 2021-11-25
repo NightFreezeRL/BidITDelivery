@@ -32,7 +32,7 @@ class PackageController extends Controller
             'email' => $user->email,
             'address' => $user->user_data->address,
             'packageId' => PackageController::generatePackageId(),
-            'deliveryStatus' => 'On Hold',
+            'deliveryStatus' => 'Standing By',
         ]);
     }
     }
