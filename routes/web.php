@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Package;
 use App\Models\PackageUser;
-use App\Models\userPackage;
+use App\Models\User_Package;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,22 +25,22 @@ Route::post('/', function () {
     return redirect()->to('/main/'.$id);
 });
 Route::get('/main/{id}', function ($id){
-    $userPackages = userPackage::all()->where('packageId', $id);
-    return view('main', ['packs' => $userPackages]);
+    $User_Packages = User_Package::all()->where('packageId', $id);
+    return view('main', ['packs' => $User_Packages]);
 });
 Route::get('/edit', function (){
     $AUID = Auth::user()->id;
-    $package = userPackage::all();
+    $package = User_Package::all();
     return view('edit', ['AUID' => $AUID, 'packs' => $package]);
 });
 Route::get('/package/{id}', function ($id){
-    $package = userPackage::all()->where('packageId', $id);
+    $package = User_Package::all()->where('packageId', $id);
     return view('package', ['pack' => $package]);
 });
 Route::post('/package/{id}', function ($id){
     //$id = request('id');
     $type = request('Status');
-    userPackage::where('packageId', $id)->update(['deliveryStatus' => $type]);
+    User_Package::where('packageId', $id)->update(['deliveryStatus' => $type]);
     return redirect('/edit');
 });
 Auth::routes();
