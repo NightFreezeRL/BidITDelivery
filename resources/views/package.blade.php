@@ -25,22 +25,16 @@
                         </tr>
                         @foreach($pack as $p)
                         <tr>
-                            @csrf
-                            <form action="">
+                            <form action="" method="POST">
+                                 @csrf
                                 <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
-                                <input type="hidden" name="id" value="{{ old('$p]->id', $p->id) }}">
+                                <input type="hidden" name="id" value="{{ $p->id }}">
                                 <td style="Border: 1px solid black;">{{ $p->packageNumber }}</td>
                                 <td style="Border: 1px solid black;">
-                                    <select name="progress" id="progress">
-                                        <option value="Delivered">Delivered</option>
-                                        <option value="On Route">On Route</option>
-                                        <option value="On Hold">On Hold</option>
-                                    </select>
+                                    <input type="text" name="Status">
                                 </td>
                                 <td><input type="submit" name="Save" id="save"></td>
                             </form>
-                            
-                            
                         </tr>
                         @endforeach
                     </table>

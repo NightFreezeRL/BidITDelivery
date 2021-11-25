@@ -35,10 +35,10 @@ Route::get('/package/{id}', function ($id){
     return view('package', ['pack' => $package]);
 });
 Route::post('/package/{id}', function ($id){
-    $id = request('id');
-    $type = request('progress');
-    DB::table('package')->where('id', $id)->update(array('deliveryStatus'=> $type));
-    return redirect('/main');
+    //$id = request('id');
+    $type = request('Status');
+    Package::where('packageNumber', $id)->update(['deliveryStatus' => $type]);
+    return redirect('/edit');
 });
 Auth::routes();
 
