@@ -43,7 +43,7 @@ class PackageController extends Controller
     public function generatePackage(Request $request){
         $generated_id = PackageController::generatePackageId();
 
-        $package = new User_Package(); // vai arī kā tev sauc to modeli
+        $package = new User_Package();
         $package->name = $request->userName;
         $package->email = $request->userEmail;
         $package->address = $request->userAddress;
@@ -52,7 +52,7 @@ class PackageController extends Controller
         $package->save();
 
         return response()->json([
-            'packageID' => $generated_id
+            'packageId' => $generated_id
         ]);
     }
 
@@ -61,7 +61,14 @@ class PackageController extends Controller
         return print("It works!");
     }
 
-    function confirmation(){
-        return ;
+    function confirmation($packageId): array
+    {
+        $package = User_Package::query()
+            ->where('packageId', '=', $packageId)
+            ->firstOrFail();
+
+        return [
+            'deliveryStatus' => $package->deliveryStatus
+        ];
     }
 }
