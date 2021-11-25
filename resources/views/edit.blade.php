@@ -17,7 +17,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <table style="width:400px;">
+                    <table style="width:400px;margin-left: auto;margin-right: auto;">
                         <tr>
                             <th>ID:</th>
                             <th>Name</th>

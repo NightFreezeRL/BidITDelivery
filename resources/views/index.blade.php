@@ -35,7 +35,6 @@
                                     <form action="" method="POST">
                                         @csrf
                                         <input class="form-control" type="text" name="packageId" placeholder="Enter your product code">
-                                        <br>
                                         <input class="submit" type="submit" value="Track your product">
                                     </form>
 
@@ -53,7 +52,7 @@
     <section class="about_top">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 ">
                     <div class="about_single_item">
                         <div class="item_icon">
                         <img src="fast.png" alt="item">
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 ">
                     <div class="about_single_item">
                         <div class="item_icon">
                         <img src="partner.png" alt="item">
@@ -75,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 ">
                     <div class="about_single_item">
                         <div class="item_icon">
                         <img src="private.png" alt="item">
@@ -96,7 +95,7 @@
     <!--    start about us area-->
     <section class="about_us_area" id="about">
         <div class="container">
-            <div class="row">
+            <div class="row2">
                 <div class="col-md-6 col-sm-6">
                     <div class="about_us_content">
                         <h2>About us</h2>
