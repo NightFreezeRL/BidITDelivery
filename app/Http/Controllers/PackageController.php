@@ -16,4 +16,8 @@ class PackageController extends Controller
         }
         return $randomString;
     }
+
+    public function generatePackage(){
+        return [UserPackageTable::class, 'up'];
+    }
 }

@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //Post random generated packageID
-Route::post('/delivery/package/{packageId}', [PacakgeController::class, 'generatePackageId']);
+Route::post('/delivery/package/generate', [PacakgeController::class, 'generatePackage']);
 //Get package status by packageID
 Route::post('/delivery/package/{packageId}/status', [DeliveryController::class, 'confirmation']);
