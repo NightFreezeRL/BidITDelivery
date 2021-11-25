@@ -573,6 +573,14 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  justify-content: flex-end;
+}
+.row2 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
 }
 
 .no-gutters {
@@ -4364,6 +4372,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  
 }
 .card > hr {
   margin-right: 0;

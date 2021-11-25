@@ -95,7 +95,7 @@
     <!--    start about us area-->
     <section class="about_us_area" id="about">
         <div class="container">
-            <div class="row">
+            <div class="row2">
                 <div class="col-md-6 col-sm-6">
                     <div class="about_us_content">
                         <h2>About us</h2>
