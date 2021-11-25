@@ -31,7 +31,11 @@
                                 <input type="hidden" name="id" value="{{ $p->id }}">
                                 <td style="Border: 1px solid black;">{{ $p->packageNumber }}</td>
                                 <td style="Border: 1px solid black;">
-                                    <input type="text" name="Status">
+                                    <select name="Status" id="Status">
+                                        <option value="Delivered">Delivered</option>
+                                        <option value="On Route">On Route</option>
+                                        <option value="On Hold">On Hold</option>
+                                    </select>
                                 </td>
                                 <td><input type="submit" name="Save" id="save"></td>
                             </form>
