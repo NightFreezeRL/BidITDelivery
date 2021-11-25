@@ -21,8 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //Post generated package
-Route::get('delivery/package/generate', [PackageController::class, 'generatePackage']);
+Route::post('delivery/package/generate', [PackageController::class, 'generatePackage']);
 //For debugging.
 Route::get('delivery/package/test', [PackageController::class, 'test']);
 //Get package status by packageID
-Route::post('delivery/package/{packageId}/status', [PackageController::class, 'confirmation']);
+Route::get('delivery/package/{packageId}/status', [PackageController::class, 'confirmation']);
+

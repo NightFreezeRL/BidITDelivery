@@ -20,7 +20,7 @@ class PackageController extends Controller
         return $randomString;
     }
 
-    function generatePackage(){
+   /* function generatePackage(){
        $response = Http::get('https://bidit-web.herokuapp.com/api/users');
 
         foreach($response->object() as $user){
@@ -37,6 +37,22 @@ class PackageController extends Controller
     }
     }
     return print("Success");
+    }*/
+
+    public function generatePackage(Request $request){
+        $generated_id = PackageController::generatePackageId();
+
+        $package = new User_Package(); // vai arī kā tev sauc to modeli
+        $package->name = $request->userName;
+        $package->email = $request->userEmail;
+        $package->address = $request->userAddress;
+        $package->packageId = $request->$generated_id;
+        $package->deliveryStatus = 'Standing By';
+        $package->save();
+
+        return response()->json([
+            'packageID' => $generated_id
+        ]);
     }
 
     function test()
