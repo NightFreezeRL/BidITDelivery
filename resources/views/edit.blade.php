@@ -21,7 +21,7 @@
                         <tr>
                             <th>ID:</th>
                             <th>Name</th>
-                            <th>Adress</th>
+                            <th>Address</th>
                             <th>Email</th>
                             <th>Package ID</th>
                             <th>Delivery Status</th>
@@ -31,7 +31,7 @@
                             @csrf
                             <td style="Border: 1px solid black;">{{ $p->id }}</tdh>
                             <td style="Border: 1px solid black;">{{ $p->name }}</tdh>
-                            <td style="Border: 1px solid black;">{{ $p->adress }}</tdh>
+                            <td style="Border: 1px solid black;">{{ $p->address }}</tdh>
                             <td style="Border: 1px solid black;">{{ $p->email }}</tdh>
                             <td style="Border: 1px solid black;"><a href="/package/{{ $p->packageId }}">{{ $p->packageId }}</a></td>
                             <td style="Border: 1px solid black;">{{ $p->deliveryStatus }}</td>
