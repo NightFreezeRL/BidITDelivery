@@ -71,12 +71,14 @@
     <div class="row">
         <div class="col-md-8">
         <div class="card">
+        <div class="card-header">{{ __('Delivery status') }}</div>
             <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                 @endif
+                
                 <table style="width:100%;margin-left: auto;margin-right: auto;">
                         <tr>
                             <th>ID:</th>
