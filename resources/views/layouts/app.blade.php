@@ -52,7 +52,7 @@
                                 </li>
                             @endif
                         @else
-                        @if(Auth::user()->id < 6 and Auth::user()->id > 0)
+                        @if(Auth::user()->id <=25 and Auth::user()->id > 0)
                         <a class="dropdown-item" href="{{ url('/edit') }}">
                                                     
                                         Edit Delivery
