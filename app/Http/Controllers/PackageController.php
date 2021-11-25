@@ -24,13 +24,17 @@ class PackageController extends Controller
        $response = Http::get('https://bidit-web.herokuapp.com/api/users');
 
         foreach($response->object() as $user){
+            if($user->user_data == null){
+                continue;
+            } else {
         DB::table('user_package_table')->insert([
             'name' => $user->name,
             'email' => $user->email,
-            'adress' => '$user->adress',
+            'address' => $user->user_data->address,
             'packageId' => PackageController::generatePackageId(),
             'deliveryStatus' => 'On Hold',
         ]);
+    }
     }
     return print("Success");
     }

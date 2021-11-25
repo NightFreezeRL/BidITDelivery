@@ -14,7 +14,7 @@ class UserPacakgeTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->string('adress');
+            $table->string('address');
             $table->string('packageId');
             $table->string('deliveryStatus');
             $table->timestamps();
