@@ -569,7 +569,7 @@ pre code {
   }
 }
 .row {
-  position: relative;
+  position: sticky;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
