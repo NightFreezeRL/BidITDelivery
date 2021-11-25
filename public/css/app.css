@@ -569,10 +569,10 @@ pre code {
   }
 }
 .row {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin: auto;
 }
 
 .no-gutters {
@@ -9981,7 +9981,7 @@ h3 {
   }
 
   .container {
-    min-width: 992px !important;
+    margin: auto;
   }
 
   .navbar {
