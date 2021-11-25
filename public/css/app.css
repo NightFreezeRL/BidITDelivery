@@ -6653,7 +6653,7 @@ button.bg-dark:focus {
 }
 
 .justify-content-center {
-  justify-content: center !important;
+  justify-content: right !important;
 }
 
 .justify-content-between {
