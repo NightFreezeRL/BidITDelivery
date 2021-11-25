@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\PackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Post random generated packageID
-Route::post('/delivery/package/generate', [PacakgeController::class, 'generatePackage']);
+//Post generated package
+Route::get('delivery/package/generate', [PackageController::class, 'generatePackage']);
 //Get package status by packageID
 Route::post('/delivery/package/{packageId}/status', [DeliveryController::class, 'confirmation']);

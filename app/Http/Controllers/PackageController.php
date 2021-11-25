@@ -18,6 +18,6 @@ class PackageController extends Controller
     }
 
     public function generatePackage(){
-        return [UserPackageTable::class, 'up'];
+        return ;
     }
 }
