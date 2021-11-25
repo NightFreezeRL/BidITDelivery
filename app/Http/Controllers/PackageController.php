@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use App\Models\User_Package;
+use App\Http\Models\User_Package;
 
 class PackageController extends Controller
 {
@@ -44,10 +44,10 @@ class PackageController extends Controller
         $generated_id = PackageController::generatePackageId();
 
         $package = new User_Package(); // vai arī kā tev sauc to modeli
-        $package->name = $request->input('name');
-        $package->email = $request->input('email');
-        $package->address = $request->input('address');
-        $package->packageId = $request->$generated_id;
+        $package->name = $request->userName;
+        $package->email = $request->userEmail;
+        $package->address = $request->userAddress;
+        $package->packageId = $generated_id;
         $package->deliveryStatus = 'Standing By';
         $package->save();
 
