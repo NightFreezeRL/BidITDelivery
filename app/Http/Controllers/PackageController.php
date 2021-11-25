@@ -44,9 +44,9 @@ class PackageController extends Controller
         $generated_id = PackageController::generatePackageId();
 
         $package = new User_Package(); // vai arī kā tev sauc to modeli
-        $package->name = $request->name;
-        $package->email = $request->email;
-        $package->address = $request->address;
+        $package->name = $request->input('name');
+        $package->email = $request->input('email');
+        $package->address = $request->input('address');
         $package->packageId = $request->$generated_id;
         $package->deliveryStatus = 'Standing By';
         $package->save();
